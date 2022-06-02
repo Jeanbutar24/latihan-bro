@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function trianggle(angka) {
+        for (let i = 1; i <= angka; i++) {
+          let hasil = "";
+          if (i > 3) {
+            for (let j = 1; j <= i; j++) {
+              hasil += "*";
+              console.log(hasil);
+            }
+          } else {
+            for (let k = 1; k <= i; k++) {
+              if (k > 3) {
+                hasil += "*";
+                console.log(hasil);
+              }
+            }
+          }
+        }
+      }
+
+      trianggle(7);
+
+      function kotak(panjang, lebar) {
+        let kotak = "";
+        for (let i = 1; i <= lebar; i++) {
+          if (i == 1 || i == lebar) {
+            for (let j = 1; j <= panjang; j++) {
+              kotak += "#";
+            }
+          } else {
+            for (let k = 1; k <= panjang; k++) {
+              if (k == 1 || k == panjang) {
+                kotak += "#";
+              } else {
+                kotak += " ";
+              }
+            }
+          }
+          kotak += "\n";
+        }
+
+        console.log(kotak);
+      }
+
+      kotak(10, 5);
+    </script>
+  </body>
+</html>
