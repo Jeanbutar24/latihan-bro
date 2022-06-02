@@ -9,22 +9,27 @@
   <body>
     <script>
       function trianggle(angka) {
-        for (let i = 1; i <= angka; i++) {
-          let hasil = "";
-          if (i > 3) {
-            for (let j = 1; j <= i; j++) {
+        let hasil = "";
+        for (let i = 0; i <= angka; i++) {
+          // console.log("*");
+          if (i <= 3 || i == angka) {
+            for (j = 1; j <= i; j++) {
               hasil += "*";
-              console.log(hasil);
             }
           } else {
             for (let k = 1; k <= i; k++) {
-              if (k > 3) {
+              if (k == j || k == i) {
                 hasil += "*";
-                console.log(hasil);
+              } else {
+                hasil += " ";
               }
             }
           }
+
+          hasil += "\n";
         }
+
+        console.log(hasil);
       }
 
       trianggle(7);
